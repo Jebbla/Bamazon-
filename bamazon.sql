@@ -19,21 +19,21 @@ INSERT INTO products (product_name, department_name, price, stock_quantity, prod
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
      VALUES ("Modest Mouse, Moon & Antarctica", "Music/Vinyl", 34.99, 10, 0);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
-     VALUES ("The Very Best of Suzi Quatro", "Music/Vinyl", 34.99 , 1, 0);
+     VALUES ("The Very Best of Suzi Quatro", "Music/Vinyl", 34.99 , 5, 0);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
      VALUES ("Kings of Leon, Aha Shake Heartbreak", "Music/Vinyl", 36.99, 5, 2);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
-     VALUES ("The Killers: Career Box", "Music/Vinyl", 184.99, 1, 0);
+     VALUES ("The Killers: Career Box", "Music/Vinyl", 184.99, 5, 0);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
      VALUES ("Weezer: Teal Album", "Music/Vinyl", 21.99, 8, 2);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
      VALUES ("Weezer: Black Album", "Music/Vinyl", 21.99, 10, 2);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
-     VALUES ("The Beatles: The White Album", "Music/Vinyl", 99.99, 4, 1);
+     VALUES ("The Beatles: The White Album", "Music/Vinyl", 99.99, 5, 1);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
-     VALUES ("The Beatles: 1962-1966", "Music/Vinyl", 35.99, 2, 1);
+     VALUES ("The Beatles: 1962-1966", "Music/Vinyl", 35.99, 10, 1);
 INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
-    VALUES ("The Beatles: Let it Be", "Music/Vinyl", 24.99, 2, 1);
+    VALUES ("The Beatles: Let it Be", "Music/Vinyl", 24.99, 10, 1);
 
 -- CREATE TABLE departments (
 --   department_id INT NOT NULL AUTO_INCREMENT,
