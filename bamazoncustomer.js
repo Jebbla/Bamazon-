@@ -110,7 +110,7 @@ function readProducts() {
                 if (answer.shop) {
                   readProducts();
                 } else {
-                  console.log("Thank you for your business.")
+                  console.log("Thank you for your purchase. Vinyl Rocks!")
                   connection.end();
                 }
               })
