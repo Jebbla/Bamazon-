@@ -56,7 +56,7 @@ function readProducts() {
                 if (answer.shop) {
                   readProducts();
                 } else {
-                  console.log("Thank you for your purchase. Vinyl Rocks!")
+                  console.log("Thank you for stopping by. Vinyl Rocks!")
                   connection.end();
                 }
               })
