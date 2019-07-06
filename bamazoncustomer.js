@@ -54,7 +54,7 @@ function readProducts() {
 
               }]).then(function (answer) {
                 if (answer.shop) {
-                  options();
+                  readProducts();
                 } else {
                   console.log("Thank you for your purchase. Vinyl Rocks!")
                   connection.end();
@@ -68,28 +68,47 @@ function readProducts() {
                 if (err) throw err;
               });
 
+            //   console.log("\n\n ---------------------------------------------\n\n");
+
               var cost = result.price;
+            //   console.log("cost: ", cost);
+
+              var qty = result.stock_quantity;
+            //   console.log("qty: ", qty);
+
               var totalCost = cost * quantity;
-              var totalCostRound = Math.round(totalCost * 100) / 100;
-              var tax = ((.065 / 1000) * 1000) * totalCost;
-              var taxRound = Math.round(tax * 100) / 100;
-              var total = totalCostRound + taxRound;
+            //   console.log("totalCost: ", totalCost);
+
+            //   var tax = ((.065 / 100) * 1000) * totalCost;
+            //   console.log("tax: ", tax);
+              
+              var tax = (0.065 * totalCost);
+            //   console.log("tax: ", tax);
+
+            //   var taxRound = Math.round(tax * 100) / 100;
+            //   console.log("taxRound: ", taxRound);              
+
+              var total = totalCost + tax;
+            //   console.log("total: ", total);
+            //   console.log("\n\n ---------------------------------------------\n\n");
 
 
 
               console.log("QUANTITY ORDERED: " + quantity + " " + result.product_name + '  at ' + "$" + cost);
-              console.log("PRICE:  $" + totalCostRound);
-              console.log("TAX @ .065: $" + taxRound);
-              console.log("YOUR TOTAL BALANCE IS:  $" + total);
+              console.log("PRICE:  $" + totalCost);
+              console.log("TAX @ .065: $" + tax);
+              console.log("YOUR TOTAL BALANCE IS:  $" + total.toFixed(2));
 
               inquirer.prompt([{
                 type: 'confirm',
                 name: 'shop',
                 message: "Is there anything else you would like to purchase?"
 
-              }]).then(function (answer) {
+              }])
+              .then(function (answer) {
+                //   console.log("ans: ", answer.shop);
                 if (answer.shop) {
-                  options();
+                  readProducts();
                 } else {
                   console.log("Thank you for your business.")
                   connection.end();
