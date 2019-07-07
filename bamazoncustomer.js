@@ -46,7 +46,7 @@ function readProducts() {
             var quantity = parseInt(answer.itemQuantity);
 
             if (quantity > result.stock_quantity) {
-              console.log("We do not that in stock.");
+              console.log("We do not have that in stock.");
               inquirer.prompt([{
                 type: 'confirm',
                 name: 'shop',
@@ -95,8 +95,11 @@ function readProducts() {
 
 
               console.log("QUANTITY ORDERED: " + quantity + " " + result.product_name + '  at ' + "$" + cost);
+              
               console.log("PRICE:  $" + totalCost);
+              
               console.log("TAX @ .065: $" + tax);
+              
               console.log("YOUR TOTAL BALANCE IS:  $" + total.toFixed(2));
 
               inquirer.prompt([{
@@ -106,7 +109,6 @@ function readProducts() {
 
               }])
               .then(function (answer) {
-                //   console.log("ans: ", answer.shop);
                 if (answer.shop) {
                   readProducts();
                 } else {
